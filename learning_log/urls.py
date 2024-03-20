@@ -20,4 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('learning_logs.urls')),
+    # Detail page for a single topic.
+    path('topics/<int:topic_id>/', views.topic, name='topic'),
 ]
